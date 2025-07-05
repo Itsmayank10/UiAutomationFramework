@@ -1,0 +1,13 @@
+{
+  "environments": {
+    "QA": {
+      "url": "http://www.automationpractice.pl"
+    },
+    "PROD": {
+      "url": "http://www.automationpractice.pl"
+    },
+    "STAGING": {
+      "url": "http://staging.automationpractice.pl"
+    }
+  }
+}
