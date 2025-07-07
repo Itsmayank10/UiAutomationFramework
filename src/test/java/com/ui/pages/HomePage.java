@@ -12,7 +12,7 @@ public final class HomePage extends BrowserUtility {
 
     public HomePage(Browser browserName) {
         super(browserName); // To call the constructor of the parent class BrowserUtility from child class HomePage
-        goToWebsite(readJson(QA));
+        goToWebsite(readJson(QA).getUrl());
         maximizeWindow();
     }
 

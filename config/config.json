@@ -1,13 +1,16 @@
 {
   "environments": {
     "QA": {
-      "url": "http://www.automationpractice.pl"
+      "url": "http://www.automationpractice.pl",
+      "MAX_NUMBER_OF_ATTEMPS": 3
     },
     "PROD": {
-      "url": "http://www.automationpractice.pl"
+      "url": "http://www.automationpractice.pl",
+      "MAX_NUMBER_OF_ATTEMPS": 3
     },
     "STAGING": {
-      "url": "http://staging.automationpractice.pl"
+      "url": "http://staging.automationpractice.pl",
+      "MAX_NUMBER_OF_ATTEMPS": 3
     }
   }
 }
