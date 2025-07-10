@@ -2,13 +2,10 @@ package com.ui.tests;
 
 import com.ui.dataProvider.LoginDataProvider;
 import com.ui.listener.TestListener;
-import com.ui.pages.HomePage;
 import com.ui.pojo.User;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static com.ui.constants.Browser.CHROME;
 import static org.testng.Assert.assertEquals;
 
 @Listeners(TestListener.class)

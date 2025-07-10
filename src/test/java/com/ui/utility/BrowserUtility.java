@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.io.File;
@@ -49,6 +50,22 @@ public class BrowserUtility {
         } else if (browserName == Browser.OPERA) {
             // Add Opera driver initialization here
             throw new UnsupportedOperationException("Opera is not supported yet.");
+        } else {
+            throw new IllegalArgumentException("Unsupported browser: " + browserName);
+        }
+    }
+
+    public BrowserUtility(Browser browserName, boolean isHeadless) {
+        if (browserName == Browser.CHROME) {
+            ChromeOptions options = new ChromeOptions();
+            if (isHeadless) {
+                options.addArguments("--headless");
+                options.addArguments("--window-size=1920,1080");
+                options.addArguments("--disable-gpu");
+                driver.set(new ChromeDriver(options));
+            } else {
+                driver.set(new ChromeDriver(options));
+            }
         } else {
             throw new IllegalArgumentException("Unsupported browser: " + browserName);
         }

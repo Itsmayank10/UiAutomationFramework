@@ -11,7 +11,7 @@ public class BaseTest {
 
     @BeforeMethod(description = "Setup method to initialize HomePage with Chrome browser")
     public void setUp() {
-        homePage = new HomePage(CHROME);
+        homePage = new HomePage(CHROME,true);
     }
 
     public BrowserUtility getInstanceOfHomePage() {
