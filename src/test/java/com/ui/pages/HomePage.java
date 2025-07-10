@@ -3,6 +3,7 @@ package com.ui.pages;
 import com.ui.constants.Browser;
 import com.ui.utility.BrowserUtility;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import static com.ui.constants.ENV.QA;
 import static com.ui.utility.JsonUtils.readJson;
@@ -12,6 +13,12 @@ public final class HomePage extends BrowserUtility {
 
     public HomePage(Browser browserName, boolean isHeadless) {
         super(browserName,isHeadless); // To call the constructor of the parent class BrowserUtility from child class HomePage
+        goToWebsite(readJson(QA).getUrl());
+        maximizeWindow();
+    }
+
+    public HomePage(WebDriver driver) {
+        super(driver); // To call the constructor of the parent class BrowserUtility from child class HomePage
         goToWebsite(readJson(QA).getUrl());
         maximizeWindow();
     }

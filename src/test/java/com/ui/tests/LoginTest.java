@@ -23,5 +23,4 @@ public class LoginTest extends BaseTest {
         assertEquals(userName, "Mayank Sharma", "User name does not match after login.");
     }
 
-
 }
