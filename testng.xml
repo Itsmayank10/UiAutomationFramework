@@ -2,9 +2,9 @@
 
 <suite name="UI Automation Framework Test" parallel="methods" thread-count="5" verbose="1">
     <test name="UI Automation Test">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="isLambdaTest" value="true"/>
-        <parameter name="isHeadless" value="true"/>
+        <parameter name="browser" value="${browser}"/>
+        <parameter name="isLambdaTest" value="${isLambdaTest}"/>
+        <parameter name="isHeadless" value="${isHeadless}"/>
         <classes>
             <class name="com.ui.tests.LoginTest"/>
         </classes>
