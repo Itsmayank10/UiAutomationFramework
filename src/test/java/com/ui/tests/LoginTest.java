@@ -23,4 +23,9 @@ public class LoginTest extends BaseTest {
         assertEquals(userName, "Mayank Sharma", "User name does not match after login.");
     }
 
+    @Test(description = "Login test with valid Invalid credentials", dataProviderClass = LoginDataProvider.class, dataProvider = "loginDataProvider")
+    public void lodingWithInvalidCredentialsTest(User user) {
+        String errorMessage = homePage.goToLoginPage().doLoginWithInvalidCredentials(user.getEmailAddress(), user.getPassword()).getErrorMessage();
+        assertEquals(errorMessage, "Authentication failed.", "Error message does not match for invalid login.");
+    }
 }

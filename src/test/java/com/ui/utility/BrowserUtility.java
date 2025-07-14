@@ -1,10 +1,7 @@
 package com.ui.utility;
 
 import com.ui.constants.Browser;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
@@ -93,6 +90,15 @@ public class BrowserUtility {
             driver.get().findElement(locator).sendKeys(text);
         } catch (Exception e) {
             System.out.println("Unable to enter text in element: " + locator);
+            e.printStackTrace();
+        }
+    }
+
+    public void enterKeys(By locator, Keys keys) {
+        try {
+            driver.get().findElement(locator).sendKeys(keys);
+        } catch (Exception e) {
+            System.out.println("Unable to enter key in element: " + locator);
             e.printStackTrace();
         }
     }
